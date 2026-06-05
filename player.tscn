@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://uy7b3msoqhmv"]
+
+[ext_resource type="Script" uid="uid://bvnumky4f18e5" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=980773640]
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2127071154]
+shape = SubResource("CapsuleShape3D_sh265")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=286043715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.735, 0)
