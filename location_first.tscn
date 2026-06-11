@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0a77e6cx7h6n"]
 
-[ext_resource type="PackedScene" uid="uid://uy7b3msoqhmv" path="res://player.tscn" id="1_bsyxm"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_bsyxm"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2oxfw"]
 size = Vector2(20, 20)
@@ -10,6 +10,11 @@ data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0,
 
 [node name="Floor" type="Node3D" unique_id=1177406138]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=215128776]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 7.882394, 0)
+light_color = Color(1, 1, 0.64705884, 1)
+shadow_enabled = true
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2057807116]
 mesh = SubResource("PlaneMesh_2oxfw")
 
@@ -18,5 +23,7 @@ mesh = SubResource("PlaneMesh_2oxfw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1288626945]
 shape = SubResource("ConcavePolygonShape3D_bsyxm")
 
-[node name="CharacterBody3D" parent="." unique_id=980773640 instance=ExtResource("1_bsyxm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0718417, 0)
+[node name="ProtoController" parent="." unique_id=726932090 instance=ExtResource("1_bsyxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8375797, 1.0386295, 1.5644369)
+can_sprint = true
+can_freefly = true
