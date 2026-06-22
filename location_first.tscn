@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0a77e6cx7h6n"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_bsyxm"]
+[ext_resource type="PackedScene" uid="uid://dheg6s6inkwbs" path="res://box_to_interact.tscn" id="2_srt2f"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2oxfw"]
 size = Vector2(20, 20)
@@ -18,12 +19,17 @@ shadow_enabled = true
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2057807116]
 mesh = SubResource("PlaneMesh_2oxfw")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=2010559318]
+[node name="Floor" type="StaticBody3D" parent="MeshInstance3D" unique_id=2010559318]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1288626945]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Floor" unique_id=1288626945]
 shape = SubResource("ConcavePolygonShape3D_bsyxm")
 
 [node name="ProtoController" parent="." unique_id=726932090 instance=ExtResource("1_bsyxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8375797, 1.0386295, 1.5644369)
 can_sprint = true
 can_freefly = true
+
+[node name="Node3D" parent="." unique_id=1379777934 instance=ExtResource("2_srt2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19738, 0.9155047, -2.2169814)
+
+[editable path="Node3D"]

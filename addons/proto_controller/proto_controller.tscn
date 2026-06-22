@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://bt6yfondgh638" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="Script" uid="uid://dtm26hkcb87vm" path="res://addons/proto_controller/interact.gd" id="2_wr06p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -31,7 +32,14 @@ mesh = SubResource("CapsuleMesh_ucva2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_iof21")
 
-[node name="Head" type="Node3D" parent="." unique_id=478175256]
+[node name="Head" type="Node3D" parent="." unique_id=478175256 node_paths=PackedStringArray("raycast")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+script = ExtResource("2_wr06p")
+raycast = NodePath("RayCast3D")
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1956313051]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=600572255]
+target_position = Vector3(0, 0, -2)
+collide_with_areas = true
+debug_shape_custom_color = Color(0, 0, 1, 1)
