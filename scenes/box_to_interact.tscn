@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://dheg6s6inkwbs"]
 
-[ext_resource type="Script" uid="uid://bsanmsbpgdihu" path="res://object_interaction.gd" id="1_xoc64"]
+[ext_resource type="Script" uid="uid://cp7e0btog2y78" path="res://script/box.gd" id="1_xoc64"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_up6y4"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xoc64"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_igi8u"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" unique_id=1387804906]
 mesh = SubResource("BoxMesh_up6y4")
 
-[node name="Box" type="StaticBody3D" parent="." unique_id=216236301]
-disable_mode = 2
+[node name="Box" type="StaticBody3D" parent="." unique_id=1534961624]
 script = ExtResource("1_xoc64")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Box" unique_id=1792343152]
-shape = SubResource("ConcavePolygonShape3D_xoc64")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box" unique_id=623943498]
+shape = SubResource("ConcavePolygonShape3D_igi8u")

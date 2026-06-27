@@ -12,6 +12,5 @@ func _process(delta):
 	if Input.is_action_just_pressed("interact"):
 		if raycast.is_colliding():
 			var obj = raycast.get_collider()
-			print(obj.name)
-			if obj.has_method("on_interact"):
-				obj.on_interact()
+			if obj.has_method("interact"):
+				obj.interact()
