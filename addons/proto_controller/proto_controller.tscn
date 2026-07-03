@@ -43,3 +43,6 @@ raycast = NodePath("RayCast3D")
 target_position = Vector3(0, 0, -2)
 collide_with_areas = true
 debug_shape_custom_color = Color(0, 0, 1, 1)
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Head" unique_id=1696282997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41377932, 0, -1.1501524)

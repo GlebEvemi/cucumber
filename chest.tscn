@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ddjuhvf5k1xdt"]
+
+[ext_resource type="PackedScene" uid="uid://dy2fs0irtathy" path="res://models/chest.blend" id="1_twpm2"]
+[ext_resource type="Script" uid="uid://daosas6bx1i1g" path="res://chest.gd" id="2_8uwsg"]
+
+[node name="chest" unique_id=1942779248 node_paths=PackedStringArray("anim") instance=ExtResource("1_twpm2")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("2_8uwsg")
+anim = NodePath("AnimationPlayer")
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(718932690) index="0" unique_id=265492544]
+bones/0/position = Vector3(1.210364e-16, -1.4948092, -0.005619623)
+bones/0/rotation = Quaternion(-0.72568816, -6.592923e-17, -6.592922e-17, 0.68802375)
+bones/1/rotation = Quaternion(0.041337598, 2.8409923e-18, 3.8082714e-17, 0.99914527)
+
+[node name="Bone" parent="Armature/Skeleton3D" index="0" unique_id=1425866153]
+transform = Transform3D(1, 1.1031755e-16, -1.6232944e-18, -1.6232435e-18, 0.029422708, 0.9995668, 1.103176e-16, -0.9995668, 0.0294227, 2.9601197e-16, -2.3841858e-07, 4.018657e-07)
+
+[node name="Bone_001" parent="Armature/Skeleton3D" index="1" unique_id=1848339974]
+transform = Transform3D(1, 2.6248459e-17, 1.5568801e-18, 1.5569446e-18, -0.118212655, 0.9929882, 2.624851e-17, -0.99298817, -0.118212655, 2.9601197e-16, -2.3841858e-07, 4.018657e-07)

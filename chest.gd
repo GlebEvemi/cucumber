@@ -1,18 +1,19 @@
 extends Interactable
 
-@onready var mesh = $".."
-
-var spin := false;
+@export var anim: AnimationPlayer
+var isOpen: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if(spin):
-		mesh.rotate_z(600)
+	pass
+
 
 func interact():
-	print("interact")
-	spin = !spin
+	if !isOpen:
+		print("playing animation")
+		anim.play("ArmatureAction")
+		isOpen = !isOpen

@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d0a77e6cx7h6n"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_bsyxm"]
-[ext_resource type="PackedScene" uid="uid://dheg6s6inkwbs" path="res://scenes/box_to_interact.tscn" id="2_srt2f"]
+[ext_resource type="PackedScene" uid="uid://dheg6s6inkwbs" path="res://scenes/box_to_test_interaction.tscn" id="2_srt2f"]
+[ext_resource type="PackedScene" uid="uid://ddjuhvf5k1xdt" path="res://chest.tscn" id="3_vsa2i"]
+[ext_resource type="PackedScene" uid="uid://b3jvlchbtrmsu" path="res://scenes/donut_to_test_pickability.tscn" id="4_r0wje"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2oxfw"]
 size = Vector2(20, 20)
@@ -25,9 +27,17 @@ mesh = SubResource("PlaneMesh_2oxfw")
 shape = SubResource("ConcavePolygonShape3D_bsyxm")
 
 [node name="ProtoController" parent="." unique_id=726932090 instance=ExtResource("1_bsyxm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8375797, 1.0386295, 1.5644369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8375797, 2.66436, 1.5644369)
 can_sprint = true
 can_freefly = true
 
 [node name="MeshInstance3D2" parent="." unique_id=1387804906 instance=ExtResource("2_srt2f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8123343, 1.0308363, 0)
+
+[node name="chest" parent="." unique_id=1942779248 instance=ExtResource("3_vsa2i")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 7.4829946)
+
+[node name="Key" parent="." unique_id=1679071306 instance=ExtResource("4_r0wje")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.6553198, -3.5939589)
+
+[editable path="ProtoController"]
